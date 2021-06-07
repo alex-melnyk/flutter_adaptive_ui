@@ -7,14 +7,16 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
+      theme: ThemeData.light().copyWith(
+        primaryColor: Colors.indigo,
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      // darkTheme: ThemeData.dark(),
       home: DashboardPage(),
     );
   }

@@ -2,18 +2,26 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class BottomTabBar extends StatelessWidget {
-  const BottomTabBar({Key? key}): super(key: key);
+  const BottomTabBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return Padding(
       padding: const EdgeInsets.all(0),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: theme.cardColor,
           borderRadius: BorderRadius.vertical(
             top: Radius.circular(24),
           ),
+          boxShadow: [
+            BoxShadow(
+              color: theme.shadowColor.withOpacity(0.5),
+              blurRadius: 8,
+            ),
+          ],
         ),
         child: SafeArea(
           top: false,
@@ -25,7 +33,10 @@ class BottomTabBar extends StatelessWidget {
               children: [
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(CupertinoIcons.home),
+                  icon: Icon(
+                    CupertinoIcons.home,
+                    color: theme.primaryColor,
+                  ),
                 ),
                 IconButton(
                   onPressed: () {},

@@ -6,6 +6,7 @@ class TabletSidebar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
 
     return SafeArea(
       child: Container(
@@ -25,7 +26,7 @@ class TabletSidebar extends StatelessWidget {
                   width: 52,
                   height: 52,
                   decoration: BoxDecoration(
-                    color: Colors.purple,
+                    color: theme.primaryColor,
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: Center(
@@ -113,6 +114,8 @@ class ListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return Container(
       padding: const EdgeInsets.symmetric(
         vertical: 16.0,
@@ -124,7 +127,7 @@ class ListItem extends StatelessWidget {
           IconTheme.merge(
             data: IconThemeData(
               size: 16,
-              color: isActive ? Colors.purple : null,
+              color: isActive ? theme.primaryColor : null,
             ),
             child: icon,
           ),
@@ -136,7 +139,7 @@ class ListItem extends StatelessWidget {
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w600,
-                color: isActive ? Colors.purple : null,
+                color: isActive ? theme.primaryColor : null,
               ),
               child: title,
             ),
