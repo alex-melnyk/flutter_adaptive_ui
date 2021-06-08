@@ -16,7 +16,10 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.indigo,
         scaffoldBackgroundColor: Colors.white,
       ),
-      // darkTheme: ThemeData.dark(),
+      // darkTheme: ThemeData.dark().copyWith(
+      //   primaryColor: Colors.indigo,
+      //   scaffoldBackgroundColor: Colors.white12,
+      // ),
       home: DashboardPage(),
     );
   }

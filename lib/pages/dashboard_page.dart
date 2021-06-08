@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_adaptive_ui/pages/overview_page.dart';
 import 'package:flutter_adaptive_ui/widgets/widgets.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -69,13 +70,7 @@ class _DashboardPageState extends State<DashboardPage>
                             color: theme.canvasColor,
                             borderRadius: BorderRadius.circular(isTablet ? 16 : 0),
                           ),
-                          child: Center(
-                            child: ElevatedButton(
-                              onPressed: () =>
-                                  _animationController.forward(),
-                              child: Text('Animate'),
-                            ),
-                          ),
+                          child: OverviewPage(),
                         ),
                       ),
                     ),
@@ -165,7 +160,7 @@ class _DashboardPageState extends State<DashboardPage>
                       ),
                     ),
                   ),
-                )
+                ),
             ],
           );
         },
